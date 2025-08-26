@@ -2,49 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do Page</title>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>To do form</title>
 </head>
 <body>
-   <form action="/add" method="post">
-        <h1>To Do List</h1>
-        <p>Add a new task:</p>
-        <input type="text" id="task" name="task" placeholder="Enter your task here">
-        <input type="submit" value="Add Task">
+     <form action="/submit" method="post">
+        <h1>To Do Form</h1>
+        <label for="Itemname">Itemname:</label>
+        <input type="text" id="Itemname" name="Itemname">
+        <label for="Itemdesc">ItemDescription:</label>
+        <input type="text" id="Itemdesc" name="Itemdesc">
+        <input type="submit" value="Submit">
     </form>
-    <h2>Current Tasks:</h2>
-    <ul>
-        {% for task in tasks %}
-            <li>{{ task }}</li>
-        {% endfor %}
-    </ul>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #f4f4f4;
+            background-color: turquoise;
         }
         form {
-            max-width: 400px;
+            max-width: 300px;
             margin: auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        h2{
             text-align: center;
             color: #333;
         }
-        input[type="text"] {
-            width: calc(100% - 22px);
-            padding: 10px;
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
         input[type="submit"] {
-            background-color: #28a745;
+            background-color: #aaaf4c;
             color: white;
             padding: 10px 15px;
             border: none;
@@ -52,19 +52,13 @@
             cursor: pointer;
         }
         input[type="submit"]:hover {
-            background-color: #218838;
+            background-color: #45a049;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background: #fff;
-            margin-bottom: 5px;
-            padding: 10px;
-            border-radius: 4px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
         }
     </style>
 </body>
-</html>
