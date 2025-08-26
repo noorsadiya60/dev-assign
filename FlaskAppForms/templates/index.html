@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" 
           content="width=device-width, initial-scale=1.0">
-    <title>HTML</title>
+    <title>To do form</title>
 </head>
 <body>
-    {% if error %}
-        <p style="color: red;">{{ error }}</p>
-    {% endif %}
      <form action="/submit" method="post">
-        <h1>Login Form</h1>
-        <p>Please enter your credentials:</p>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        <h1>To Do Form</h1>
+        <label for="Itemname">Itemname:</label>
+        <input type="text" id="Itemname" name="Itemname">
+        <label for="Itemdesc">ItemDescription:</label>
+        <input type="text" id="Itemdesc" name="Itemdesc">
         <input type="submit" value="Submit">
     </form>
     <style>
